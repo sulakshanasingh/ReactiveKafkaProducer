@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: Reactive Producer
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    template:
+      default-topic: my-topic
+
+server:
+  port: 8087
+topic:
+  dlq: dlq-topic
